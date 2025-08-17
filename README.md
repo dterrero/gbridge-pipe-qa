@@ -1,4 +1,4 @@
-# γ-Bridge (gamma-bridge)
+# GBridge Pipe QA
 
 **Manufacturing QA for pipe flows:** Stage 1 predicts `log10(phi_v)` from plant-grade proxies; Stage 2 (hurdle) detects and ranks `gamma`. Reproducible scripts, audited metrics, and figures.
 
