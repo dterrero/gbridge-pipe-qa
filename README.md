@@ -23,5 +23,6 @@ python3 make_figures_from_preds.py --run_dir runs_hurdle_clean --fig_dir y_bridg
 python3 make_gamma_posonly_figs.py --run_dir runs_hurdle_clean --fig_dir y_bridge_pipeline_supporting_files/figures
 
 ## License
-Source code: PolyForm Noncommercial 1.0.0. See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
-Commercial use requires a separate license. For licensing inquiries, contact: dterrero@theticktheory.com
+- Source code: Apache License 2.0 (Apache-2.0) — see [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+- Commercial use is permitted under Apache-2.0.
+- Enterprise support/custom licensing inquiries: dterrero@theticktheory.com
