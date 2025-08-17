@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+# Copyright (c) 2025 Dickson A Terrero
+
 # make_gamma_posonly_figs_fixed.py
 import argparse, pandas as pd, numpy as np, matplotlib.pyplot as plt
 from scipy.stats import spearmanr
