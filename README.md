@@ -21,3 +21,7 @@ python3 verify_run.py --outdir runs_hurdle_clean --input_csv data/training_table
   --test_files gamma_3D_OpenFOAM_processed_t1000_full_data.csv --stage2_mode hurdle --stage2_target log1p
 python3 make_figures_from_preds.py --run_dir runs_hurdle_clean --fig_dir y_bridge_pipeline_supporting_files/figures
 python3 make_gamma_posonly_figs.py --run_dir runs_hurdle_clean --fig_dir y_bridge_pipeline_supporting_files/figures
+
+## License
+Source code: PolyForm Noncommercial 1.0.0. See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+Commercial use requires a separate license. For licensing inquiries, contact: licensing@yourdomain.com
