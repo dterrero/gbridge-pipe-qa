@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+# Copyright (c) 2025 Dickson A Terrero
+
 #!/usr/bin/env python3
 import argparse, json, sys, hashlib
 from pathlib import Path
