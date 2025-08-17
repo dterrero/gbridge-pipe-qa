@@ -1,5 +1,11 @@
-# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
-# Copyright (c) 2025 Dickson A Terrero
+# Copyright 2025 Dickson A. Terrero
+# SPDX-License-Identifier: Apache-2.0
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy at http://www.apache.org/licenses/LICENSE-2.0
+# (full text in the LICENSE file at the project root)
+
 
 # make_gamma_posonly_figs_fixed.py
 import argparse, pandas as pd, numpy as np, matplotlib.pyplot as plt
