@@ -24,4 +24,4 @@ python3 make_gamma_posonly_figs.py --run_dir runs_hurdle_clean --fig_dir y_bridg
 
 ## License
 Source code: PolyForm Noncommercial 1.0.0. See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
-Commercial use requires a separate license. For licensing inquiries, contact: licensing@yourdomain.com
+Commercial use requires a separate license. For licensing inquiries, contact: dterrero@theticktheory.com
