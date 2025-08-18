@@ -1,0 +1,13 @@
+name: gbridge
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - numpy=1.26.4
+  - pandas=2.2.2
+  - scikit-learn=1.3.2
+  - scipy=1.11.4
+  - matplotlib=3.8.2
+  - joblib=1.3.2
+  # optional:
+  # - pyyaml=6.0.1
+  # - tqdm=4.66.4
