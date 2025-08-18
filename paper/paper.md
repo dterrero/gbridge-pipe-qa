@@ -10,13 +10,18 @@ affiliations:
 date: 17 August 2025
 bibliography: paper.bib
 tags: [quality assurance, turbulence, OpenFOAM, Python, manufacturing]
-repository: https://github.com/dterrero/gbridge-pipe-qa.git
-archive_doi: 10.5281/zenodo.16890945   
+repository: https://github.com/dterrero/gbridge-pipe-qa
+archive_doi: 10.5281/zenodo.16890945
 ---
 
 # Summary
 
 **G-Bridge** is an open-source Python pipeline for inline quality assurance (QA) of pipe flows that bridges factory-grade proxies—pressure drop, temperature delta, vibration, and line speed—to turbulence-aware diagnostics. The software follows a two-stage design: (i) a regressor maps proxies to $\log_{10}\phi_v$ (viscous dissipation); (ii) a hurdle model first detects $\gamma>0$ events and then regresses $\log(1{+}\gamma)$ on positives to estimate vortex-stretching magnitude. The package provides containers, unit tests, pre-trained checkpoints, and an audit script that regenerates tables and figures from saved predictions with input hash checking, enabling deterministic reproduction across environments.
+
+## Methods
+
+Stage 1 regresses $\log_{10}\phi_v$ from factory proxies; Stage 2 uses a hurdle design that (i) detects $\gamma>0$ and (ii) regresses $\log(1{+}\gamma)$ on the positives.
+![Overview of G-Bridge and representative results. (A) Two-stage pipeline from factory proxies to physics-aware QA signals. (B) Stage 1 predicted vs.~true in $\log_{10}\phi_v$. (C) Stage 2 predicted vs.~true on positives in $\log(1{+}\gamma)$.](paper/fig1_overview_results.png)
 
 # Statement of need
 
@@ -27,3 +32,4 @@ QA lines routinely record proxy signals, yet the flow-physics indicators most al
 No external funding. We thank open-source contributors to OpenFOAM and scikit-learn.
 
 # References
+
