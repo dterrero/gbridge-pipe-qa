@@ -24,7 +24,7 @@ Stage 1 regresses $\log_{10}\phi_v$ from factory proxies; Stage 2 uses a hurdle 
 ![Overview of G-Bridge and representative results. 
 (A) Two-stage pipeline from factory proxies to physics-aware QA signals. 
 (B) Stage 1 predicted vs. true in $\log_{10}\phi_v$. 
-(C) Stage 2 predicted vs. true on positives in $\log(1+\gamma)$.](paper/fig1_overview_results.png)
+(C) Stage 2 predicted vs. true on positives in $\log(1+\gamma)$.](fig1_overview_results.png)
 
 
 # Statement of need
