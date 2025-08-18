@@ -25,4 +25,4 @@ python3 make_gamma_posonly_figs.py --run_dir runs_hurdle_clean --fig_dir y_bridg
 ## License
 - Source code: Apache License 2.0 (Apache-2.0) — see [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
 - Commercial use is permitted under Apache-2.0.
-- Enterprise support/custom licensing inquiries: dterrero@theticktheory.com
+- Enterprise support/custom licensing inquiries: dterrero@theticktheory.info
