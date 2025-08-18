@@ -21,6 +21,7 @@ archive_doi: 10.5281/zenodo.16890945
 ## Methods
 
 Stage 1 regresses $\log_{10}\phi_v$ from factory proxies; Stage 2 uses a hurdle design that (i) detects $\gamma>0$ and (ii) regresses $\log(1{+}\gamma)$ on the positives.
+
 ![Overview of G-Bridge and representative results. 
 (A) Two-stage pipeline from factory proxies to physics-aware QA signals. 
 (B) Stage 1 predicted vs. true in $\log_{10}\phi_v$. 
