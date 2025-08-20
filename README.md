@@ -44,12 +44,12 @@ python3 make_figures_from_preds.py --run_dir runs_hurdle_clean \
 
 python3 make_gamma_posonly_figs.py --run_dir runs_hurdle_clean \
   --fig_dir y_bridge_pipeline_supporting_files/figures
+```
 
 ## Optional: Noisy stress test (appendix-only; not used for Tables 1–2)
 
 <details>
 <summary>Show commands</summary>
-```
 
 ```bash
 # Build noisy + one-shot post-processing (clipping/winsorization)
