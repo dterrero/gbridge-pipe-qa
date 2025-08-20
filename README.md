@@ -77,5 +77,4 @@ python3 csv_to_table.py \
 
 # Validate noisy artifact
 python3 gbridge_csv_validator.py --csv data/training_table_noisy_pp.csv
-```
 
