@@ -1,13 +1,4 @@
 #!/usr/bin/env python3
-
-# Copyright 2025 Dickson A. Terrero
-# SPDX-License-Identifier: Apache-2.0
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy at http://www.apache.org/licenses/LICENSE-2.0
-# (full text in the LICENSE file at the project root)
-
 """
 G-Bridge: CSV → feature table (leak-aware)
 
@@ -26,9 +17,9 @@ python3 csv_to_table.py \
   --inputs RAW1.csv RAW2.csv \
   --out training_table_v1.csv
 
-# noisy stress test (appendix)
+# noisy stress test (appendix), one-shot with PP
 python3 csv_to_table.py \
-  --inputs gamma_3D_OpenFOAM_processed_t1000_full_data.csv gamma_3D_snapshot_Re2500_Fouling0.6_t5.0.csv \
+  --inputs RAW1.csv RAW2.csv \
   --noise gaussian_6db --seed 123 \
   --pp-clip-nonneg --pp-winsorize Phi_v Gamma --pp-p 99.9 \
   --out training_table_noisy_pp.csv
@@ -250,11 +241,11 @@ def main():
     ap.add_argument("--out", type=Path, default=Path("training_table.csv"))
     ap.add_argument("--seed", type=int, default=123, help="RNG seed for noise")
     # Optional post-processing for stress tests
-    ap.add_argument("--pp-clip-nonneg", action="store_true",
+    ap.add_argument("--pp-clip-nonneg", dest="pp_clip_nonneg", action="store_true",
                     help="Clip Umag/vib_proxy to >=0 (use for noisy stress tests)")
-    ap.add_argument("--pp-winsorize", nargs="*", default=[],
+    ap.add_argument("--pp-winsorize", dest="pp_winsorize", nargs="*", default=[],
                     help="Columns to winsorize at 99.9th pct (e.g. Phi_v Gamma)")
-    ap.add_argument("--pp-p", type=float, default=99.9)
+    ap.add_argument("--pp-p", dest="pp_p", type=float, default=99.9)
 
     args = ap.parse_args()
     rng = np.random.default_rng(args.seed)
@@ -271,12 +262,12 @@ def main():
         hi = float(np.nanpercentile(arr, p))
         return np.clip(arr, None, hi)
 
-    if args.pp-clip-nonneg:
+    if args.pp_clip_nonneg:
         for c in ["Umag", "vib_proxy"]:
             if c in full.columns:
                 full[c] = np.clip(full[c].to_numpy(dtype=float), 0.0, None)
 
-    for c in args.pp-winsorize:
+    for c in args.pp_winsorize:
         if c in full.columns:
             full[c] = _winsorize(full[c].to_numpy(dtype=float), args.pp_p)
 
