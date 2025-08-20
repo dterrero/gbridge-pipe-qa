@@ -44,3 +44,20 @@ python3 make_figures_from_preds.py --run_dir runs_hurdle_clean \
 
 python3 make_gamma_posonly_figs.py --run_dir runs_hurdle_clean \
   --fig_dir y_bridge_pipeline_supporting_files/figures
+
+## Optional: Noisy stress test (appendix-only; not used for Tables 1–2)
+
+<details>
+<summary>Show commands</summary>
+
+```bash
+# Build noisy + one-shot post-processing (clipping/winsorization)
+python3 csv_to_table.py \
+  --inputs data/gamma_3D_OpenFOAM_processed_t1000_full_data.csv data/gamma_3D_snapshot_Re2500_Fouling0.6_t5.0.csv \
+  --noise gaussian_6db --seed 123 \
+  --pp-clip-nonneg --pp-winsorize Phi_v Gamma --pp-p 99.9 \
+  --out data/training_table_noisy_pp.csv
+
+# Validate noisy artifact
+python3 gbridge_csv_validator.py --csv data/training_table_noisy_pp.csv
+
