@@ -49,6 +49,7 @@ python3 make_gamma_posonly_figs.py --run_dir runs_hurdle_clean \
 
 <details>
 <summary>Show commands</summary>
+```
 
 ```bash
 # Build noisy + one-shot post-processing (clipping/winsorization)
