@@ -30,9 +30,9 @@ What it does
 
 Usage
 -----
-python gbridge_csv_validator.py --csv file.csv
-python gbridge_csv_validator.py --csv file.csv --id-cols id,time
-python gbridge_csv_validator.py --csv file.csv --out report.json
+python data/gbridge_csv_validator.py --csv data/your_file.csv
+python data/gbridge_csv_validator.py --csv data/your_file.csv --id-cols id,time
+python data/gbridge_csv_validator.py --csv data/your_file.csv --out report.json
 """
 
 import argparse
