@@ -61,4 +61,21 @@ python3 csv_to_table.py \
 
 # Validate noisy artifact
 python3 gbridge_csv_validator.py --csv data/training_table_noisy_pp.csv
+```
+
+## Citation
+If you use this software, please cite the archived release:
+
+```bash
+@software{gbridge_v1_0_0_zenodo,
+  title     = {G-Bridge: Pipe Manufacturing QA (noise-free)},
+  author    = {Terrero, Dickson},
+  year      = {2025},
+  version   = {v1.0.0},
+  doi       = {10.5281/zenodo.16890945},
+  url       = {https://doi.org/10.5281/zenodo.16890945},
+  publisher = {Zenodo},
+  note      = {Archived software release}
+}
+
 
