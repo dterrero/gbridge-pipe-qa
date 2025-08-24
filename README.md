@@ -3,7 +3,7 @@
 [![status](https://joss.theoj.org/papers/acb19405f8c24865d39b92b32db63975/status.svg)](https://joss.theoj.org/papers/acb19405f8c24865d39b92b32db63975)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16890945.svg)](https://doi.org/10.5281/zenodo.16890945)
 
-**Manufacturing QA for pipe flows:** Stage 1 predicts `log10(phi_v)` from plant-grade proxies; Stage 2 (hurdle) detects and ranks `gamma`. Reproducible scripts, audited metrics, and figures.  
+**Manufacturing QA for pipe flows:** Stage 1 predicts `log10(phi_v)` from plant-grade proxies; Stage 2 (hurdle) detects and ranks `gamma` ($\gamma>0$). Reproducible scripts, audited metrics, and figures.  
 **Scope (v1):** fixed geometry + high-SNR; *no runtime CFD*; noisy runs are **appendix-only** stress tests.
 
 ---
